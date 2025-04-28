@@ -1,0 +1,32 @@
+
+<main>
+  <div class="container">
+    <section class="characters">
+      <div class="card">
+        <div class="card-header">
+          <h2>Персонажи Tekken 7</h2>
+        </div>
+        <div class="card-body">
+          <table class="characters-table">
+            <tbody>
+              <tr *ngFor="let row of characters | slice:0:6; let i = index">
+                <td *ngFor="let character of characters.slice(i*4, (i+1)*4)" 
+                    (click)="goToCharacter(character.id)"
+                    class="clickable-cell">
+                  <div class="character-image-container">
+                    <img 
+                      [src]="character.image" 
+                      [alt]="character.name" 
+                      class="character-image"
+                    >
+                  </div>
+                  <p>{{ character.name }}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

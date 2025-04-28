@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <img src="assets/logo.png" alt="Логотип" class="logo" (click)="navigateTo('home')">
+  <div class="nav-links">
+    <a (click)="navigateTo('about')">About</a> |
+    <a (click)="navigateTo('characters')">Characters</a>
+  </div>
+</nav>
+<div id="center"></div>
+<img src="assets/unnamed.jpg" id="left">
+<img src="assets/right.jpg" id="right">
+<div class = "container">
+  <router-outlet></router-outlet>
+</div>
+<footer>
+  <p>&copy; 2025 Тлегенов Абзал</p>
+</footer>

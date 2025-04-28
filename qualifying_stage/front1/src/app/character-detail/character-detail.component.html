@@ -1,0 +1,18 @@
+<main>
+    <div class="container">
+      <section class="character-detail">
+        <div class="card">
+          <div class="card-header">
+            <img [src]="character?.image" alt="Character Image" class="character-image">
+            <h2>{{ character?.name }}</h2>
+            <p class="title">О персонаже</p>
+          </div>
+          <div class="card-body">
+            <p>{{ character?.description || 'Нет описания для этого персонажа.' }}</p>
+            
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  
